@@ -2975,3 +2975,4 @@
 [debug] [MJSONWP] But deleting session, so not returning
 [debug] [MJSONWP] Responding to client with driver.deleteSession() result: null
 [HTTP] <-- DELETE /wd/hub/session/768ecc89-87af-4412-bf5f-4d12f932973f 200 2282 ms - 76 
+[Appium] Received SIGTERM - shutting down
