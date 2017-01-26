@@ -12,4 +12,17 @@ class Screens
     @screen_create_filter ||= ScreenCreateFilter.new @driver
     @screen_create_filter
   end
+<<<<<<< HEAD
+=======
+
+  def screen_select_sub_category
+    @screen_select_sub_category ||= ScreenSelectSubCategory.new @driver
+    @screen_select_sub_category
+  end
+
+  def screen_set_filter_parameters
+    @screen_set_filter_parameters ||= ScreenSetFilterParameters.new @driver
+    @screen_set_filter_parameters
+  end
+>>>>>>> upstream/master
 end

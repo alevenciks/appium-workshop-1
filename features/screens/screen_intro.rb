@@ -23,15 +23,22 @@ class ScreenIntro < ScreenBase
     #class - android.widget.TextView class can be used with more tahn one element as result incorrect logic
     #text - can be changed and as result incorrect value argument
     #ID - unique. The best method in this situation
+
+    @button_to_app = element(:id, 'close_intro')
     @driver = driver
   end
 
   def visible?
+    @driver.alert_accept
     @driver.find_element(@base[:type], @base[:value])
     @driver.find_element(@button_intro_close[:type], @button_intro_close[:value])
     @driver.find_element(@intro_footer_image[:type], @intro_footer_image[:value])
     @driver.find_element(@page_image[:type], @page_image[:value])
     @driver.find_element(@intro_text_header[:type], @intro_text_header[:value])
     @driver.find_element(@intro_text_footer[:type], @intro_text_footer[:value])
+  end
+
+  def close_intro
+    @driver.find_element(@button_to_app[:type], @button_to_app[:value]).click
   end
 end

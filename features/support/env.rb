@@ -18,7 +18,11 @@ end
 options = {
   'port' => 5500,
   'portboot' => 5051,
+<<<<<<< HEAD
   'sn' => '20f18f8c7ce3',
+=======
+  'sn' => '00bbb8a0ec4f9f25',
+>>>>>>> upstream/master
   'app' => 'app.apk',
   'appPackage' => 'com.testdevlab.notifyus'
 
@@ -36,6 +40,7 @@ desired_capabilities = {
   'appPackage' => options['appPackage'],
   'noReset' => 'True'
   # 'app' => options['app']
+  # 'app' => options['app']
 }
 # TODO get rid of global $driver variable
 $driver = Appium::Driver.new(caps: desired_capabilities, appium_lib: { server_url: "http://localhost:#{options['port']}/wd/hub" })
@@ -50,8 +55,4 @@ Before do
 end
 After do
   $driver.driver_quit
-end
-
-Before('@remove_favourites') do
-  @tests.test_ad.if_any_favourite_remove
 end
